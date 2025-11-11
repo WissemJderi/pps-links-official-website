@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <h1>PPS Links</h1>
+      <h1 className="text-2xl">PPS Links</h1>
     </>
   );
 }
