@@ -1,10 +1,16 @@
-import Containers from "../assets/containers.jpg";
+import bg from "../assets/containers.jpg";
 const Hero = () => {
   return (
-    <div className="relative w-full h-72">
-      <img src={Containers} alt="" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-black/85"></div>
-      <div className="absolute inset-0 flex flex-col gap-6 justify-between text-white text-xl p-10">
+    <div
+      className="relative w-full h-full bg-black/85"
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="relative z-10 flex flex-col gap-6 justify-between text-white text-xl p-10">
         <div className="flex flex-col gap-1">
           <h1 className="text-4xl font-medium">PPS Links</h1>
           <h1 className="text-3xl">
@@ -20,6 +26,9 @@ const Hero = () => {
           </button>
         </div>
       </div>
+      {/* <img src={Containers} alt="" className="w-full h-full object-cover" /> */}
+      {/* <div className="absolute inset-0 bg-black/85"></div> */}
+      <div className="flex flex-col gap-6 justify-between text-white text-xl p-10"></div>
     </div>
   );
 };
