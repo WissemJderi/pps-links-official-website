@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
 import Services from "./components/Services";
+import WhyChooseUs from "./components/WhyChooseUs";
 
 function App() {
   console.log("Print");
@@ -13,6 +14,7 @@ function App() {
       <AboutUs />
       <Products />
       <Services />
+      <WhyChooseUs />
     </>
   );
 }

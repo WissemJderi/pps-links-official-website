@@ -38,3 +38,11 @@ export const services = [
     description: "Réseau logistique efficace pour assurer des délais courts.",
   },
 ];
+
+export const whyChooseUsParagraphs = [
+  "Large gamme de produits — Un seul partenaire pour plusieurs secteurs.",
+  "Qualité garantie — Sélection rigoureuse de fournisseurs et de matériaux.",
+  "Prix compétitifs — Meilleur rapport qualité-prix du marché.",
+  "Service client réactif — Réponses rapides et suivi personnalisé.",
+  "Fiabilité et professionnalisme — Des années d’expérience au service de nos clients.",
+];
