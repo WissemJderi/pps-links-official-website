@@ -4,7 +4,7 @@ const ProductCard = ({ img, title, description }) => {
       <img
         src={img}
         alt="Product Image "
-        className="rounded-lg h-60 w-full object-cover"
+        className="rounded-lg h-40 w-full object-cover"
       />
       <div className="flex flex-col gap-2">
         <h3 className="text-xl font-semibold">{title}</h3>

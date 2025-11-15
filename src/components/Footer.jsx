@@ -35,7 +35,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <HorizontalRule />
+          <HorizontalRule color={"gray-600"} />
         </div>
 
         <div className="flex flex-col text-[#D9D9D9] text-lg gap-10 items-center">
@@ -56,7 +56,7 @@ const Footer = () => {
           />
         </div>
       </section>
-      <HorizontalRule />
+      <HorizontalRule color={"gray-600"} />
       <section className="text-[#D9D9D9] text-xs text-center">
         <p>© {currentYear} PPS Links. Tous droits réservés.</p>
         <p>Conçu par PPS Links.</p>

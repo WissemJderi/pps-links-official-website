@@ -1,4 +1,5 @@
 import { whyChooseUsParagraphs } from "./utils/data";
+import HorizontalRule from "./utils/HorizontalRule";
 import Title from "./utils/Title";
 
 const WhyChooseUs = () => {
@@ -7,7 +8,7 @@ const WhyChooseUs = () => {
       <div key={i} className="flex flex-col gap-4 text-center">
         <p>{i + 1 + `- ` + `${paragraph}`}</p>
         {i !== whyChooseUsParagraphs.length - 1 && (
-          <hr className="text-black w-40 font-bold border-t-2 border-[#063726] my-2 self-center" />
+          <HorizontalRule color={"#063726"} />
         )}
       </div>
     );
