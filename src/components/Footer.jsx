@@ -14,7 +14,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const iconSize = 25;
   return (
-    <footer className="px-5 py-10 flex flex-col gap-10">
+    <footer id="footer" className="px-5 py-10 flex flex-col gap-10">
       <h1 className="text-4xl text-white font-semibold text-center">
         PPS Links
       </h1>

@@ -15,7 +15,7 @@ const Products = () => {
     );
   });
   return (
-    <div className="p-10 flex flex-col gap-12">
+    <div id="products" className="p-10 flex flex-col gap-12">
       <Title text={"Nos catégories de produits"} />
       <ProductsNavbar />
       {productList}

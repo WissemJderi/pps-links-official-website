@@ -17,7 +17,7 @@ const Hero = () => {
             Fournisseur de produits industriels et alimentaires de qualité
           </h1>
         </div>
-        <div className="flex flex-row items-center justify-around font-bold">
+        <div className="flex flex-row gap-4 items-center justify-around font-bold">
           <button className="bg-[#0b5e41] border border-[#0b5e41] text-sm px-4 py-2">
             Demander Un Devis
           </button>

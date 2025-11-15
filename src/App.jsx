@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
 import Services from "./components/Services";
+import ScrollToTop from "./components/utils/ScrollToTop";
 import WhyChooseUs from "./components/WhyChooseUs";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Services />
       <WhyChooseUs />
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

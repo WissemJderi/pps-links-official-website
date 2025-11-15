@@ -2,7 +2,7 @@ import Title from "./utils/Title";
 
 const AboutUs = () => {
   return (
-    <div className="p-10 flex flex-col gap-12">
+    <div id="about-us" className="p-10 flex flex-col gap-12">
       <Title text={"A Propos De Nous"} />
       <section className="flex flex-col gap-3 text-gray-200 text-left">
         <p>
