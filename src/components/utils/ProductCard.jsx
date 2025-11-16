@@ -1,6 +1,6 @@
 const ProductCard = ({ img, title, description }) => {
   return (
-    <div className="bg-[#D9D9D9] rounded-lg flex flex-col gap-8 py-8 px-8 md:p-5">
+    <div className="bg-[#D9D9D9] rounded-lg flex flex-col gap-8  md:p-4 lg:p-9">
       <img
         src={img}
         alt="Product Image "
