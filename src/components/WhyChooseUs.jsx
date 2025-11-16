@@ -5,10 +5,10 @@ import Title from "./utils/Title";
 const WhyChooseUs = () => {
   const companyAdvList = whyChooseUsParagraphs.map((paragraph, i) => {
     return (
-      <div key={i} className="flex flex-col gap-4 text-center">
+      <div key={i} className="flex flex-col gap-4 sm:gap-10 text-center">
         <p>{i + 1 + `- ` + `${paragraph}`}</p>
         {i !== whyChooseUsParagraphs.length - 1 && (
-          <HorizontalRule color={"#063726"} />
+          <HorizontalRule color={"063726"} />
         )}
       </div>
     );

@@ -14,7 +14,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const iconSize = 25;
   return (
-    <footer id="footer" className="px-5 py-10 flex flex-col gap-10">
+    <footer
+      id="footer"
+      className="px-5 py-10 sm:px-100 sm:py-20 flex flex-col gap-10"
+    >
       <h1 className="text-4xl text-white font-semibold text-center">
         PPS Links
       </h1>
@@ -22,20 +25,20 @@ const Footer = () => {
       <section className="flex flex-col gap-8">
         <div className="flex flex-col text-[#D9D9D9] text-xl gap-2">
           <div className="flex flex-row justify-around py-4">
-            <p>
+            <p className="cursor-pointer">
               <FaFacebook size={25} />
             </p>
 
-            <p>
+            <p className="cursor-pointer">
               <FaInstagram size={25} />
             </p>
 
-            <p>
+            <p className="cursor-pointer">
               <FaLinkedin size={25} />
             </p>
           </div>
 
-          <HorizontalRule color={"gray-600"} />
+          <HorizontalRule />
         </div>
 
         <div className="flex flex-col text-[#D9D9D9] text-lg gap-10 items-center">
@@ -55,8 +58,11 @@ const Footer = () => {
             icon={<MdEmail size={iconSize} />}
           />
         </div>
+        <hr
+          className={`w-full font-bold border-t rounded-4xl border-gray-400 my-2 self-center`}
+        />
       </section>
-      <HorizontalRule color={"gray-600"} />
+
       <section className="text-[#D9D9D9] text-xs text-center">
         <p>© {currentYear} PPS Links. Tous droits réservés.</p>
         <p>Conçu par PPS Links.</p>

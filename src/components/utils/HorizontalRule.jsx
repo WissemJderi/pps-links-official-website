@@ -1,8 +1,7 @@
-const HorizontalRule = ({ color }) => {
+const HorizontalRule = ({ color = "ffffff" }) => {
   return (
     <hr
-      className={`text-black w-40 font-bold border-t-2 rounded-4xl border-${color} my-2 self-center`}
-      // gray-600
+      className={`w-40 font-bold border-t rounded-4xl border-[#${color}] my-2 self-center`}
     />
   );
 };

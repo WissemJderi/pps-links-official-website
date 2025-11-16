@@ -14,7 +14,7 @@ const Services = () => {
     );
   });
   return (
-    <div id="services" className="p-10 flex flex-col gap-12">
+    <div id="services" className="p-10 md:px-50 lg:px-60 flex flex-col gap-12">
       <Title text={"Nos services"} />
       <ul className="flex flex-col gap-12">{serviceList}</ul>
     </div>

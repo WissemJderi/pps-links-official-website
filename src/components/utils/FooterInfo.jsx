@@ -3,7 +3,7 @@ const FooterInfo = ({ label, info, icon }) => {
   return (
     <p className="flex flex-col items-center gap-4">
       {icon}
-      <span>
+      <span className="text-lg">
         <span className={`${labelStyle}`}>{label}:</span> {info}
       </span>
     </p>

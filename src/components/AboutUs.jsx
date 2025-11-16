@@ -2,9 +2,9 @@ import Title from "./utils/Title";
 
 const AboutUs = () => {
   return (
-    <div id="about-us" className="p-10 flex flex-col gap-12">
+    <div id="about-us" className="p-10 md:px-50 lg:px-80  flex flex-col gap-12">
       <Title text={"A Propos De Nous"} />
-      <section className="flex flex-col gap-3 text-gray-200 text-left">
+      <section className="flex flex-col gap-3 text-gray-200 text-left text-lg">
         <p>
           PPS Links est une entreprise spécialisée dans la distribution de
           produits destinés aux secteurs alimentaire, automobile et industriel.
