@@ -18,10 +18,17 @@ const Hero = () => {
           </h1>
         </div>
         <div className="flex flex-row gap-4 items-center justify-around font-bold">
-          <button className="bg-[#0b5e41] border border-[#0b5e41] text-sm px-4 py-2">
+          <button className="bg-[#0b5e41] border border-[#0b5e41] text-sm px-4 py-2 cursor-pointer">
             Demander Un Devis
           </button>
-          <button className="border  text-sm px-4 py-2">
+          <button
+            onClick={() => {
+              document
+                .getElementById("products")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="border  text-sm px-4 py-2 cursor-pointer"
+          >
             Découvrir Nos Produits
           </button>
         </div>

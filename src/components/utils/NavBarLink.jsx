@@ -1,6 +1,7 @@
 const NavBarLink = ({ id, text }) => {
   return (
     <button
+      className="cursor-pointer hover:text-gray-300"
       onClick={() => {
         document
           .getElementById(`${id}`)
