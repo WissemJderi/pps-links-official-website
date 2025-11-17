@@ -3,6 +3,8 @@ import ProductsNavbar from "./utils/ProductsNavbar";
 import Title from "./utils/Title";
 import { products } from "./utils/data";
 
+import { motion } from "motion/react";
+
 const Products = () => {
   const productList = products.map((product) => {
     return (
@@ -21,6 +23,7 @@ const Products = () => {
     >
       <Title text={"Nos catégories de produits"} />
       <ProductsNavbar />
+      <motion.div layoutId="underline" />
       <div className="grid md:grid-cols-2 gap-8 md:gap-4">{productList}</div>
     </div>
   );

@@ -17,8 +17,8 @@ const Hero = () => {
             Fournisseur de produits industriels et alimentaires de qualité
           </h1>
         </div>
-        <div className="flex flex-row gap-4 sm:gap-12 items-center justify-around font-bold">
-          <button className="bg-[#0b5e41] border border-[#0b5e41] text-sm px-4 py-2 cursor-pointer">
+        <div className="flex flex-row gap-4 sm:gap-12 items-center justify-around sm:font-semibold font-bold">
+          <button className="bg-[#0b5e41] border border-[#0b5e41] sm:text-lg text-sm px-4 py-2 cursor-pointer">
             Demander Un Devis
           </button>
           <button
@@ -27,7 +27,7 @@ const Hero = () => {
                 .getElementById("products")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="border  text-sm px-4 py-2 cursor-pointer"
+            className="border  text-sm px-4 py-2 cursor-pointer sm:text-lg "
           >
             Découvrir Nos Produits
           </button>
