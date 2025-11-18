@@ -1,6 +1,9 @@
+import { motion } from "motion/react";
+
 const NavBarLink = ({ id, text }) => {
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.05 }}
       className="cursor-pointer hover:text-gray-300"
       onClick={() => {
         document
@@ -9,7 +12,7 @@ const NavBarLink = ({ id, text }) => {
       }}
     >
       {text}
-    </button>
+    </motion.button>
   );
 };
 
