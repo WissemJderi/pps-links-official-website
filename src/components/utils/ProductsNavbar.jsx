@@ -9,31 +9,57 @@ const ProductsNavbar = () => {
     "Fournitures industrielles",
   ];
 
-  const [selectedTab, setSelectedTab] = useState(tabs[0]);
-  const linkStyle = "cursor-pointer";
+  const productData = {
+    0: ["Boîtes alimentaires", "Barquettes", "Films plastiques"],
+    1: ["Huiles moteur", "Liquide de frein", "Filtres automobiles"],
+    2: ["Gants industriels", "Sacs poubelle pro", "Rubans adhésifs"],
+  };
+
+  const [selectedTab, setSelectedTab] = useState(0);
+
+  const linkStyle = "cursor-pointer py-3 px-6";
+
   return (
-    <div className="border-b-2 border-white">
-      <motion.ul
-        layout
-        className="flex flex-row justify-around gap-4 text-sm sm:text-lg font-bold text-white text-center "
-      >
-        {tabs.map((tab, i) => (
-          <motion.li
+    <div>
+      {/* NAVBAR */}
+      <div className="border-b-2 border-[#0b5e41]">
+        <motion.ul
+          layout
+          className="flex flex-row justify-between gap-4 text-sm sm:text-lg font-bold text-white"
+        >
+          {tabs.map((tab, i) => (
+            <motion.li
+              key={i}
+              initial={false}
+              className={linkStyle}
+              animate={{
+                backgroundColor: i === selectedTab ? "#0b5e41" : "#09100f",
+              }}
+              whileHover={{ scale: 1.01 }}
+              onClick={() => setSelectedTab(i)}
+            >
+              {tab}
+              {i === selectedTab ? (
+                <motion.div layoutId="underline" id="underline" />
+              ) : null}
+            </motion.li>
+          ))}
+        </motion.ul>
+      </div>
+
+      {/* PRODUCTS SECTION */}
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {productData[selectedTab].map((p, i) => (
+          <motion.div
             key={i}
-            initial={false}
-            animate={{
-              backgroundColor: i === selectedTab ? "#eee" : "#eee0",
-            }}
-            onClick={() => setSelectedTab(i)}
+            className="p-4 bg-[#0b5e41] text-white rounded-xl"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
           >
-            {" "}
-            {`${tab}`}
-            {i === selectedTab ? (
-              <motion.div layoutId="underline" id="underline" />
-            ) : null}
-          </motion.li>
+            {p}
+          </motion.div>
         ))}
-      </motion.ul>
+      </div>
     </div>
   );
 };

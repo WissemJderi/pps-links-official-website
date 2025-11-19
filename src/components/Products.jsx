@@ -24,7 +24,9 @@ const Products = () => {
       <Title text={"Nos catégories de produits"} />
       <ProductsNavbar />
       <motion.div layoutId="underline" />
-      <div className="grid md:grid-cols-2 gap-8 md:gap-4">{productList}</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-4">
+        {productList}
+      </div>
     </div>
   );
 };

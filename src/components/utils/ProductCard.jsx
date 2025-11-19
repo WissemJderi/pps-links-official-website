@@ -1,3 +1,5 @@
+import { AiOutlineFullscreen } from "react-icons/ai";
+
 const ProductCard = ({ img, title, description }) => {
   return (
     <div className="bg-[#D9D9D9] rounded-lg flex flex-col gap-8  md:p-4 lg:p-9">
@@ -11,6 +13,7 @@ const ProductCard = ({ img, title, description }) => {
         <p className="text-[#313131] text-xs">{description}</p>
         <button className="mt-3 text-blue-600 font-bold cursor-pointer hover:underline self-end">
           Voir Plus &gt;
+          <AiOutlineFullscreen />
         </button>
       </div>
     </div>
