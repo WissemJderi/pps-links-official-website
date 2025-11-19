@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { AnimatePresence } from "motion/react";
 import { useState } from "react";
+import { products } from "./data";
+import { AiOutlineFullscreen } from "react-icons/ai";
 
 const ProductsNavbar = () => {
   const tabs = [
@@ -8,7 +10,6 @@ const ProductsNavbar = () => {
     "Produits automobiles",
     "Fournitures industrielles",
   ];
-
   const productData = {
     0: ["Boîtes alimentaires", "Barquettes", "Films plastiques"],
     1: ["Huiles moteur", "Liquide de frein", "Filtres automobiles"],
@@ -25,7 +26,7 @@ const ProductsNavbar = () => {
       <div className="border-b-2 border-[#0b5e41]">
         <motion.ul
           layout
-          className="flex flex-row justify-between gap-4 text-sm sm:text-lg font-bold text-white"
+          className="flex flex-row justify-between gap-4 text-xs sm:text-lg font-bold text-white"
         >
           {tabs.map((tab, i) => (
             <motion.li
@@ -48,15 +49,32 @@ const ProductsNavbar = () => {
       </div>
 
       {/* PRODUCTS SECTION */}
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {productData[selectedTab].map((p, i) => (
+      <div className="mx-10 mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4">
+        {products[selectedTab].map((p, i) => (
           <motion.div
             key={i}
-            className="p-4 bg-[#0b5e41] text-white rounded-xl"
+            className="bg-[#D9D9D9] rounded-lg flex flex-col gap-8 p-3 md:p-4 lg:p-9"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            {p}
+            <img
+              src={p.img}
+              alt="Product Image "
+              className="rounded-lg h-40 w-full object-cover"
+            />
+            <div className="flex flex-col gap-2">
+              <h3 className="text-xl md:text-sm font-semibold">{p.title}</h3>
+              <p className="text-[#313131] text-xs">{p.description}</p>
+              <motion.button
+                whileHover={{
+                  scale: 1.1,
+                  transition: { duration: 2 },
+                }}
+                className="mt-3 text-blue-600 font-bold cursor-pointer hover:underline self-end"
+              >
+                <AiOutlineFullscreen size={25} color="black" />
+              </motion.button>
+            </div>
           </motion.div>
         ))}
       </div>
