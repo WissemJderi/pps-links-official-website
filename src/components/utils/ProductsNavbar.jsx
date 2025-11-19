@@ -10,13 +10,10 @@ const ProductsNavbar = () => {
     "Produits automobiles",
     "Fournitures industrielles",
   ];
-  const productData = {
-    0: ["Boîtes alimentaires", "Barquettes", "Films plastiques"],
-    1: ["Huiles moteur", "Liquide de frein", "Filtres automobiles"],
-    2: ["Gants industriels", "Sacs poubelle pro", "Rubans adhésifs"],
-  };
 
   const [selectedTab, setSelectedTab] = useState(0);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const linkStyle = "cursor-pointer py-3 px-6";
 
@@ -49,7 +46,13 @@ const ProductsNavbar = () => {
       </div>
 
       {/* PRODUCTS SECTION */}
-      <div className="mx-10 mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4">
+      <motion.div
+        key={selectedTab}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        className="mx-10 mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4"
+      >
         {products[selectedTab].map((p, i) => (
           <motion.div
             key={i}
@@ -66,18 +69,58 @@ const ProductsNavbar = () => {
               <h3 className="text-xl md:text-sm font-semibold">{p.title}</h3>
               <p className="text-[#313131] text-xs">{p.description}</p>
               <motion.button
-                whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 2 },
-                }}
+                whileHover={{ scale: 1.1 }}
                 className="mt-3 text-blue-600 font-bold cursor-pointer hover:underline self-end"
+                onClick={() => {
+                  setSelectedProduct(p);
+                  setIsModalOpen(true);
+                }}
               >
                 <AiOutlineFullscreen size={25} color="black" />
               </motion.button>
             </div>
+
+            <AnimatePresence>
+              {isModalOpen && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="fixed inset-0 bg-black/70 bg-opacity-60 flex justify-center items-center z-50"
+                  onClick={() => setIsModalOpen(false)} // close when clicking background
+                >
+                  <motion.div
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.8, opacity: 0 }}
+                    onClick={(e) => e.stopPropagation()} // prevent closing when clicking content
+                    className="bg-white rounded-lg p-6 max-w-md w-full shadow-xl"
+                  >
+                    <img
+                      src={selectedProduct?.img}
+                      className="w-full h-48 object-cover rounded-lg mb-4"
+                    />
+
+                    <h2 className="text-xl font-bold">
+                      {selectedProduct?.title}
+                    </h2>
+                    <p className="text-gray-700 mt-2">
+                      {selectedProduct?.description}
+                    </p>
+
+                    <button
+                      className="mt-4 px-4 py-2 bg-[#0b5e41] text-white rounded-lg"
+                      onClick={() => setIsModalOpen(false)}
+                    >
+                      Fermer
+                    </button>
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
