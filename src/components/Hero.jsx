@@ -1,4 +1,4 @@
-import bg from "../assets/containers.jpg";
+import bg from "public/images/containers.webp";
 import { motion } from "motion/react";
 const Hero = () => {
   const diff = 0.25;
@@ -41,7 +41,7 @@ const Hero = () => {
             whileHover={{
               scale: 1.02,
               boxShadow: "5px 5px #000",
-              transition: { duration: 0.3 },
+              transition: { duration: 0.5 },
             }}
             className="bg-[#0b5e41] border border-[#0b5e41] sm:text-lg text-sm px-4 py-4 cursor-pointer"
           >
@@ -53,7 +53,7 @@ const Hero = () => {
             whileHover={{
               scale: 1.02,
               boxShadow: "5px 5px #000",
-              transition: { duration: 0.3 },
+              transition: { duration: 0.5 },
             }}
             onClick={() => {
               document
