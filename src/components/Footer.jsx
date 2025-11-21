@@ -20,7 +20,7 @@ const Footer = () => {
         <div>
           <img
             src={Icon}
-            className="w-30 h-30 self-center"
+            className="w-40 h-20 self-center my-2"
             alt="PPS Links Logo"
           />
           <p
@@ -36,50 +36,86 @@ const Footer = () => {
             Liens rapides
           </h1>
           <div className="flex flex-col space-y-2">
-            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
+            <p
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer"
+            >
               <span>
                 <FaHome />
               </span>
               Accueil
             </p>
-            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
-              <span>
-                <FaBoxOpen />
-              </span>
-              Produits
-            </p>
-            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
+
+            <p
+              onClick={() => {
+                document
+                  .getElementById("about-us")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer"
+            >
               <span>
                 <FaInfoCircle />
               </span>
               À propos
             </p>
-            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
+            <p
+              onClick={() => {
+                document
+                  .getElementById(`products`)
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer"
+            >
+              <span>
+                <FaBoxOpen />
+              </span>
+              Produits
+            </p>
+            <p
+              onClick={() => {
+                document
+                  .getElementById("services")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer"
+            >
               <span>
                 <FaServicestack />
               </span>
               Services
-            </p>
-            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
-              <span>
-                <FaEnvelope />
-              </span>
-              Contact
             </p>
           </div>
         </section>
         <section>
           <h1 className="text-lg font-semibold text-white mb-4">Contact</h1>
           <section className="flex flex-col space-y-2">
-            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
+            <a
+              href="https://maps.app.goo.gl/ou1NhfN5gXVeCwHD9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200"
+            >
               <FaMap /> 123 Rue Exemple, Tunis
-            </p>
+            </a>
             <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
-              <FaPhone /> +216 12 345 678
+              <a
+                href="tel:+21612345678"
+                className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+              >
+                <FaPhone /> +216 12 345 678
+              </a>
             </p>
 
             <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
-              <FaEnvelope /> contact@entreprise.com
+              <a
+                href="mailto:contact@entreprise.com"
+                className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+              >
+                <FaEnvelope /> contact@entreprise.com
+              </a>
             </p>
 
             <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
