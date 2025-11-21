@@ -1,21 +1,22 @@
-import bg from "public/images/containers.webp";
+import bg from "../assets/containers.webp";
 import { motion } from "motion/react";
 const Hero = () => {
   const diff = 0.25;
   return (
     <motion.div
       className="relative w-full h-full bg-black/85"
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
         transition: { duration: 2 },
       }}
     >
+      <img
+        src={bg}
+        alt="hero background"
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="relative z-10 flex flex-col gap-10 justify-between items-center text-white text-xl p-10 sm:p-40 ">
         <div className="flex flex-col gap-5">
