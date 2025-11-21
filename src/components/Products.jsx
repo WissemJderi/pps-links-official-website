@@ -5,7 +5,7 @@ const Products = () => {
   return (
     <div
       id="products"
-      className=" md:px-50 lg:px-60 flex flex-col sm:flex- gap-12"
+      className="my-20 md:px-50 lg:px-60 flex flex-col sm:flex- gap-12"
     >
       <Title text={"Nos catégories de produits"} />
       <ProductsNavbar />

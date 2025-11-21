@@ -18,8 +18,7 @@ const ProductsNavbar = () => {
   const linkStyle = "cursor-pointer py-3 px-6";
 
   return (
-    <div>
-      {/* NAVBAR */}
+    <div className="flex flex-col gap-5">
       <div className="border-b-2 border-[#0b5e41]">
         <motion.ul
           layout

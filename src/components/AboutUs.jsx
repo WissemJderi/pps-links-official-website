@@ -4,7 +4,10 @@ import { motion } from "motion/react";
 const AboutUs = () => {
   const paragraphDifference = 0.5;
   return (
-    <div id="about-us" className="p-10 md:px-50 lg:px-80  flex flex-col gap-12">
+    <div
+      id="about-us"
+      className="my-20 p-10 md:px-50 lg:px-80  flex flex-col gap-12"
+    >
       <Title text={"A Propos De Nous"} />
       <section className="flex flex-col gap-3 text-gray-200 text-left sm:text-xl text-lg py-10">
         <motion.p

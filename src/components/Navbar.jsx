@@ -11,7 +11,7 @@ const Navbar = () => {
           transition: { duration: 1 },
         }}
         src={Icon}
-        alt="Logo"
+        alt="PPS Links Logo"
         className="w-40 h-30 self-center"
       />
       <div className="flex flex-row gap-4 sm:justify-around justify-center">

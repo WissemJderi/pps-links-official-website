@@ -1,73 +1,99 @@
-import { AiFillProduct } from "react-icons/ai";
 import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
+  FaBoxOpen,
+  FaClock,
+  FaEnvelope,
   FaMap,
-  FaPhoneFlip,
+  FaPhone,
 } from "react-icons/fa6";
-import FooterInfo from "./utils/FooterInfo";
-import { MdEmail } from "react-icons/md";
-import HorizontalRule from "./utils/HorizontalRule";
+import Icon from "../assets/ppslinks.svg";
+import { FaHome, FaInfoCircle, FaServicestack } from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const iconSize = 25;
   return (
-    <footer
-      id="footer"
-      className="px-5 py-10 sm:px-100 sm:py-20 flex flex-col gap-10"
-    >
-      <h1 className="text-4xl text-white font-semibold text-center">
-        PPS Links
-      </h1>
-
-      <section className="flex flex-col gap-8">
-        <div className="flex flex-col text-[#D9D9D9] text-xl gap-2">
-          <div className="flex flex-row justify-around py-4">
-            <p className="cursor-pointer">
-              <FaFacebook size={25} />
+    <div className="bg-neutral-900 text-neutral-300 px-6 sm:px-12 lg:px-20 py-12 sm:py-16">
+      <footer
+        id="footer"
+        className="px-6 sm:px-12 lg:px-20 py-12 sm:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-neutral-300 bg-neutral-900"
+      >
+        <div>
+          <img
+            src={Icon}
+            className="w-30 h-30 self-center"
+            alt="PPS Links Logo"
+          />
+          <p
+            className="text-neutral-400 leading-relaxed
+"
+          >
+            Votre partenaire fiable pour les besoins industriels et
+            alimentaires.
+          </p>
+        </div>
+        <section>
+          <h1 className="text-lg font-semibold text-white mb-4">
+            Liens rapides
+          </h1>
+          <div className="flex flex-col space-y-2">
+            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
+              <span>
+                <FaHome />
+              </span>
+              Accueil
             </p>
-
-            <p className="cursor-pointer">
-              <FaInstagram size={25} />
+            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
+              <span>
+                <FaBoxOpen />
+              </span>
+              Produits
             </p>
-
-            <p className="cursor-pointer">
-              <FaLinkedin size={25} />
+            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
+              <span>
+                <FaInfoCircle />
+              </span>
+              À propos
+            </p>
+            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
+              <span>
+                <FaServicestack />
+              </span>
+              Services
+            </p>
+            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
+              <span>
+                <FaEnvelope />
+              </span>
+              Contact
             </p>
           </div>
+        </section>
+        <section>
+          <h1 className="text-lg font-semibold text-white mb-4">Contact</h1>
+          <section className="flex flex-col space-y-2">
+            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
+              <FaMap /> 123 Rue Exemple, Tunis
+            </p>
+            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
+              <FaPhone /> +216 12 345 678
+            </p>
 
-          <HorizontalRule />
-        </div>
+            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
+              <FaEnvelope /> contact@entreprise.com
+            </p>
 
-        <div className="flex flex-col text-[#D9D9D9] text-lg gap-10 items-center">
-          <FooterInfo
-            label={"Addresse"}
-            info={"Kalaa sghira, Sousse"}
-            icon={<FaMap size={iconSize} />}
-          />
-          <FooterInfo
-            label={"Téléphone"}
-            info={"+216 00 000 000"}
-            icon={<FaPhoneFlip size={iconSize} />}
-          />
-          <FooterInfo
-            label={"Email"}
-            info={"Kalaa sghira, Sousse"}
-            icon={<MdEmail size={iconSize} />}
-          />
-        </div>
-        <hr
-          className={`w-full font-bold border-t rounded-4xl border-gray-400 my-2 self-center`}
-        />
-      </section>
-
-      <section className="text-[#D9D9D9] text-xs text-center">
+            <p className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer">
+              <FaClock /> Lun-Ven 9h-18h
+            </p>
+          </section>
+        </section>
+      </footer>
+      <div className="border-t border-neutral-800 mt-10 pt-6 text-center text-neutral-500 text-sm"></div>
+      <section className="text-[#D9D9D9] text-sm text-center">
         <p>© {currentYear} PPS Links. Tous droits réservés.</p>
         <p>Conçu par PPS Links.</p>
       </section>
-    </footer>
+    </div>
   );
 };
 

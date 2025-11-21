@@ -5,7 +5,7 @@ const ServiceCard = ({ title, icon: Icon, description }) => {
         {title}
       </h1>
       <Icon size="80" />
-      <p className="text-sm font-medium">{description}</p>
+      <p className="text-sm font-medium text-center">{description}</p>
     </div>
   );
 };
