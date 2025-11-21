@@ -1,4 +1,4 @@
-import Icon from "../assets/ppslinks.svg";
+import Icon from "public/images/ppslinks.svg";
 import NavBarLink from "./utils/NavBarLink";
 import { motion } from "motion/react";
 const Navbar = () => {
