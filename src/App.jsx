@@ -8,7 +8,6 @@ import ScrollToTop from "./components/utils/ScrollToTop";
 import WhyChooseUs from "./components/WhyChooseUs";
 
 function App() {
-  console.log("Print");
   return (
     <>
       <Navbar />
