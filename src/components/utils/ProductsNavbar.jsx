@@ -37,7 +37,11 @@ const ProductsNavbar = () => {
             >
               {tab}
               {i === selectedTab ? (
-                <motion.div layoutId="underline" id="underline" />
+                <motion.div
+                  layoutId="underline"
+                  id="underline"
+                  className="h-0.5 bg-white mt-2"
+                />
               ) : null}
             </motion.li>
           ))}
@@ -60,7 +64,7 @@ const ProductsNavbar = () => {
           >
             <img
               src={p.img}
-              alt="Product Image "
+              alt={p.title}
               className="rounded-lg h-40 w-full object-cover"
             />
             <div className="flex flex-col gap-2">

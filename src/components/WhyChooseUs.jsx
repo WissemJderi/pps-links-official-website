@@ -14,12 +14,16 @@ const WhyChooseUs = () => {
     );
   });
   return (
-    <div className="flex flex-col gap-12 mt-20">
-      <Title text="Pourquoi choisir PPS Links" />
-      <section className="flex flex-col gap-3 text-black text-center font-medium bg-[#D9D9D9] py-15 px-5">
+    <section
+      id="why-choose-us"
+      aria-labelledby="why-title"
+      className="flex flex-col gap-12 mt-20"
+    >
+      <Title id="why-title" text="Pourquoi choisir PPS Links" />
+      <div className="flex flex-col gap-3 text-black text-center font-medium bg-[#D9D9D9] py-15 px-5">
         {companyAdvList}
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
