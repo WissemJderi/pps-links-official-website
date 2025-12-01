@@ -26,14 +26,14 @@ Built with **React**, **Tailwind CSS**, and **Framer Motion** to demonstrate res
 ## Getting Started
 
 1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourusername/multi-products-website.git
-   ```
+```bash
+git clone https://github.com/yourusername/multi-products-website.git
+```
 2. Install dependencies:
-  ```bash
-  npm install
-  ```
+```bash
+npm install
+```
 3. Run the development server:
-  ```bash
-  npm run dev
-  ```
+```bash
+npm run dev
+```
