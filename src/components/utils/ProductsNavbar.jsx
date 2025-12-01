@@ -19,10 +19,10 @@ const ProductsNavbar = () => {
 
   return (
     <div className="flex flex-col gap-5">
-      <div className="border-b-2 border-[#0b5e41]">
+      <div className="border-b-2 border-[#0b5e41] text-center">
         <motion.ul
           layout
-          className="flex flex-row justify-between gap-4 text-xs sm:text-lg font-bold text-white"
+          className="flex flex-row justify-between text-xs sm:text-lg font-bold text-white"
         >
           {tabs.map((tab, i) => (
             <motion.li
@@ -44,7 +44,6 @@ const ProductsNavbar = () => {
         </motion.ul>
       </div>
 
-      {/* PRODUCTS SECTION */}
       <motion.div
         key={selectedTab}
         initial={{ opacity: 0, y: 10 }}
