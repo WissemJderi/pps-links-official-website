@@ -13,7 +13,7 @@ const Hero = () => {
     >
       <img
         src={bg}
-        alt="hero background"
+        alt="ndustrial containers background"
         className="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
       />
@@ -27,13 +27,13 @@ const Hero = () => {
           >
             PPS Links
           </motion.h1>
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1 + diff } }}
             className="text-3xl sm:text-2xl"
           >
             Fournisseur de produits industriels et alimentaires de qualité
-          </motion.h1>
+          </motion.h2>
         </div>
         <div className="flex flex-row gap-4 sm:gap-12 items-center justify-around sm:font-semibold font-bold">
           <motion.a
@@ -49,7 +49,7 @@ const Hero = () => {
           >
             Demander Un Devis
           </motion.a>
-          <motion.button
+          <motion.a
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1.2 + diff } }}
             whileHover={{
@@ -65,7 +65,7 @@ const Hero = () => {
             className="border  text-sm px-4 py-4 cursor-pointer sm:text-lg "
           >
             Découvrir Nos Produits
-          </motion.button>
+          </motion.a>
         </div>
       </div>
       <div className="flex flex-col gap-6 justify-between text-white text-xl p-10"></div>
