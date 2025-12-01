@@ -27,7 +27,7 @@ Built with **React**, **Tailwind CSS**, and **Framer Motion** to demonstrate res
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/yourusername/multi-products-website.git
+git clone https://github.com/WissemJderi/pps-links-official-website
 ```
 2. Install dependencies:
 ```bash
