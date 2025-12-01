@@ -36,7 +36,7 @@ const Hero = () => {
           </motion.h1>
         </div>
         <div className="flex flex-row gap-4 sm:gap-12 items-center justify-around sm:font-semibold font-bold">
-          <motion.button
+          <motion.a
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1.1 + diff } }}
             whileHover={{
@@ -45,9 +45,10 @@ const Hero = () => {
               transition: { duration: 0.5 },
             }}
             className="bg-[#0b5e41] border border-[#0b5e41] sm:text-lg text-sm px-4 py-4 cursor-pointer"
+            href="tel:+21650530016"
           >
             Demander Un Devis
-          </motion.button>
+          </motion.a>
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1.2 + diff } }}
