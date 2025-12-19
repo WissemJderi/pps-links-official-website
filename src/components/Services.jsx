@@ -20,7 +20,9 @@ const Services = () => {
       className="my-20 p-10 md:px-50 lg:px-60 flex flex-col gap-12"
     >
       <Title id="services-title" text={"Nos services"} />
-      <ul className="flex flex-col gap-12">{serviceList}</ul>
+      <ul className="flex flex-row justify-around flex-wrap gap-4">
+        {serviceList}
+      </ul>
     </section>
   );
 };

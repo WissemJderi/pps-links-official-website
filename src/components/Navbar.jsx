@@ -20,10 +20,10 @@ const Navbar = () => {
         <NavBarLink id="products" text="Produits" />
         <NavBarLink id="services" text="Services" />
         <motion.a
-          aria-label="Call us at +216 50530016"
+          aria-label="Call us at +216 53356331"
           whileHover={{ scale: 1.05 }}
           className="cursor-pointer hover:text-gray-300"
-          href="tel:+21650530016"
+          href="tel:+21653356331"
         >
           Contactez-nous
         </motion.a>

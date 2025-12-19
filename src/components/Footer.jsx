@@ -33,7 +33,7 @@ const Footer = () => {
             <li>
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200"
+                className="flex cursor-pointer items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200"
               >
                 <FaHome aria-hidden="true" /> Accueil
               </button>
@@ -45,7 +45,7 @@ const Footer = () => {
                     .getElementById("about-us")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200"
+                className="flex items-center gap-2 cursor-pointer text-neutral-400 hover:text-white transition-colors duration-200"
               >
                 <FaInfoCircle aria-hidden="true" /> À propos
               </button>
@@ -57,7 +57,7 @@ const Footer = () => {
                     .getElementById("products")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200"
+                className="flex items-center gap-2 text-neutral-400 cursor-pointer hover:text-white transition-colors duration-200"
               >
                 <FaBoxOpen aria-hidden="true" /> Produits
               </button>
@@ -69,7 +69,7 @@ const Footer = () => {
                     .getElementById("services")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200"
+                className="flex items-center gap-2 text-neutral-400 cursor-pointer hover:text-white transition-colors duration-200"
               >
                 <FaServicestack aria-hidden="true" /> Services
               </button>
@@ -87,28 +87,29 @@ const Footer = () => {
           <ul className="flex flex-col space-y-2">
             <li>
               <a
-                href="https://maps.app.goo.gl/ou1NhfN5gXVeCwHD9"
+                href="https://maps.app.goo.gl/VV9cf8uVgQBbDppd6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200"
+                className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors underline duration-200"
               >
-                <FaMap aria-hidden="true" /> 123 Rue Exemple, Tunis
+                <FaMap aria-hidden="true" /> Avenue 14 Janvier Kalaa Sghira,
+                Sousse 4021
               </a>
             </li>
             <li>
               <a
                 href="tel:+21612345678"
-                className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200"
+                className="flex items-center gap-2 text-neutral-400 hover:text-white underline transition-colors duration-200"
               >
-                <FaPhone aria-hidden="true" /> +216 12 345 678
+                <FaPhone aria-hidden="true" /> +216 53 356 331
               </a>
             </li>
             <li>
               <a
-                href="mailto:contact@entreprise.com"
-                className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200"
+                href="mailto:jderi.jawhar@yahoo.fr"
+                className="flex items-center gap-2 text-neutral-400 underline hover:text-white transition-colors duration-200"
               >
-                <FaEnvelope aria-hidden="true" /> contact@entreprise.com
+                <FaEnvelope aria-hidden="true" /> jderi.jawhar@yahoo.fr
               </a>
             </li>
             <li className="flex items-center gap-2 text-neutral-400">
